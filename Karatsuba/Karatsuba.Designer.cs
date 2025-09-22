@@ -7,6 +7,8 @@
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        public FontStyle FontStyle { get; private set; }
+
         /// <summary>
         ///  Clean up any resources being used.
         /// </summary>
@@ -28,16 +30,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Karatsuba));
             SuspendLayout();
             // 
             // Karatsuba
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            AutoSize = true;
+            ClientSize = new Size(885, 534);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "Karatsuba";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "KaratsubaAlgrorithm";
+            Text = "Karatsuba algorithm";
+            this.FontStyle = FontStyle.Bold;
+            FormClosing += Close_Window;
             ResumeLayout(false);
         }
 
