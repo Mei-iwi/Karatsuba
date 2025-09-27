@@ -11,17 +11,20 @@ namespace Karatsuba
         //Biến cục bộ
         private long x;
         private long y;
+        public long Result { get; set; }
         //Phương thức khỏi tạo không tham số
         public Karatsuba_Algrorithm()
         {
             x = 0;
             y = 0;
+            Result = 0;
         }
         //Phương thức khỏi tạo có tham số
         public Karatsuba_Algrorithm(long x, long y)
         {
             this.x = x;
             this.y = y;
+            Result = KaratsubaMultiply(x, y);
         }
         //Phương thức thiết lập và truy xuất giá trị x
         public long _x
@@ -44,7 +47,7 @@ namespace Karatsuba
         }
        
 
-        public static long KaratsubaMultiply(long x, long y)
+        private static long KaratsubaMultiply(long x, long y)
         {
             //Kiểm tra dấu của kết quả
             int s = (x > 0 ? 1 : -1) * (y > 0 ? 1 : -1);
