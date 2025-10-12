@@ -22,12 +22,13 @@
 
 
         }
-
+        //This is a event to load form
         private void Karatsuba_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.robotic_hand;
         }
 
+        //This is a event to exit form
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
