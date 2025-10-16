@@ -134,6 +134,11 @@
                 MessageBox.Show("Dữ liệu không đúng định dạng");
                 return;
             }
+            if (parts[0].Length == 1 & parts[1].Length == 1)
+            {
+                MessageBox.Show("Khoong thể tách được nữa");
+                return;
+            }
 
             long a = long.Parse(parts[0]);
             long c = long.Parse(parts[1]);
@@ -163,6 +168,11 @@
                 MessageBox.Show("Dữ liệu không đúng định dạng");
                 return;
             }
+            if (parts[0].Length == 1 & parts[1].Length == 1)
+            {
+                MessageBox.Show("Khoong thể tách được nữa");
+                return;
+            }
             long ab = long.Parse(parts[0]);
             long cd = long.Parse(parts[1]);
 
@@ -175,6 +185,35 @@
 
         private void btn_CatChuoiCuoi_Click(object sender, EventArgs e)
         {
+            string cuoiText = txt_ChuoiCuoi.Text.Trim();
+            //kiểm tra
+            if (!cuoiText.StartsWith("(") || !cuoiText.EndsWith(")") || !cuoiText.Contains(";"))
+            {
+                MessageBox.Show("Dứ liệu chuỗi cuối không hợp lệ");
+                return;
+            }
+            //cat cac ky tu thua trong chuoi
+            string[] parts = txt_ChuoiCuoi.Text.Replace("(", "")
+                                  .Replace(")", "")
+                                  .Replace(";", "")
+                                  .Trim()
+                                  .Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            if (parts.Length < 2)
+                {
+                MessageBox.Show("Dữ liệu không đúng định dạng");
+                return;
+            }
+            if (parts[0].Length == 1 & parts[1].Length==1)
+            {
+                MessageBox.Show("Khoong thể tách được nữa");
+                return;
+            }
+            long b = long.Parse(parts[0]);
+            long d = long.Parse(parts[1]);
+            // Gán lại lên ô nhập
+            txt_NhapA.Text = b.ToString();
+            txt_NhapB.Text = d.ToString();
+            CatChuoiVaHienThi(b, d, txt_ChuoiDau, txt_ChuoiGiua, txt_ChuoiCuoi);
 
         }
         private void btn_Back_Click(object sender, EventArgs e)
@@ -191,10 +230,15 @@
             txt_ChuoiGiua1.Clear();
             txt_ChuoiCuoi1.Clear();
 
-            //chuỗi giữa
+            //xoas chuỗi giữa
             txt_ChuoiDau2.Clear();
             txt_ChuoiGiua2.Clear();
             txt_ChuoiCuoi2.Clear();
+
+            //xoas du lieu cap 2 o chuoi cuoi
+            txt_ChuoiDau3.Clear();
+            txt_ChuoiGiua3.Clear();
+            txt_ChuoiCuoi3.Clear();
         }
 
        
