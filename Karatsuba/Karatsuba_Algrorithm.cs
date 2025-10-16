@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace Karatsuba
 {
-    internal class Karatsuba_Algrorithm
+    public class Karatsuba_Algrorithm
     {
         //Biến cục bộ
         private long x;
         private long y;
         public long Result { get; set; }
-        //Phương thức khỏi tạo không tham số
+        //Phương thức khỏi tạo không tham sốq
         public Karatsuba_Algrorithm()
         {
             x = 0;
