@@ -28,11 +28,14 @@
             this.Icon = Properties.Resources.robotic_hand;
         }
 
-        //This is a event to exit form
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btn_LoadTreeView_Click(object sender, EventArgs e)
         {
-            this.Close();
+            TreeView tv = new TreeView();
+            tv.Show();
+            this.Hide();
         }
+
+
         #endregion
 
         //####################################################################################################################
