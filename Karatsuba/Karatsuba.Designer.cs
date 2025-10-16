@@ -60,12 +60,13 @@
             label5 = new Label();
             txt_ChuoiGiua = new TextBox();
             txt_ChuoiDau = new TextBox();
-            textBox5 = new TextBox();
+            txt_ChuoiCuoi = new TextBox();
             btn_LoadTreeView = new Button();
             button6 = new Button();
-            button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
+            btn_CatChuoiDau = new Button();
+            btn_CatChuoiGiua = new Button();
+            btn_CatChuoiCuoi = new Button();
+            btn_Back = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -362,13 +363,13 @@
             txt_ChuoiDau.Size = new Size(333, 31);
             txt_ChuoiDau.TabIndex = 59;
             // 
-            // textBox5
+            // txt_ChuoiCuoi
             // 
-            textBox5.Location = new Point(981, 255);
-            textBox5.Margin = new Padding(6, 7, 6, 7);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(333, 31);
-            textBox5.TabIndex = 60;
+            txt_ChuoiCuoi.Location = new Point(981, 255);
+            txt_ChuoiCuoi.Margin = new Padding(6, 7, 6, 7);
+            txt_ChuoiCuoi.Name = "txt_ChuoiCuoi";
+            txt_ChuoiCuoi.Size = new Size(333, 31);
+            txt_ChuoiCuoi.TabIndex = 60;
             // 
             // btn_LoadTreeView
             // 
@@ -392,39 +393,55 @@
             button6.TabIndex = 62;
             button6.Text = "Cắt chuỗi";
             button6.UseVisualStyleBackColor = true;
+            button6.Click += button6_Click;
             // 
-            // button1
+            // btn_CatChuoiDau
             // 
-            button1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            button1.Location = new Point(240, 319);
-            button1.Margin = new Padding(4, 5, 4, 5);
-            button1.Name = "button1";
-            button1.Size = new Size(179, 38);
-            button1.TabIndex = 63;
-            button1.Text = "Cắt chuỗi đầu";
-            button1.UseVisualStyleBackColor = true;
+            btn_CatChuoiDau.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btn_CatChuoiDau.Location = new Point(240, 319);
+            btn_CatChuoiDau.Margin = new Padding(4, 5, 4, 5);
+            btn_CatChuoiDau.Name = "btn_CatChuoiDau";
+            btn_CatChuoiDau.Size = new Size(179, 38);
+            btn_CatChuoiDau.TabIndex = 63;
+            btn_CatChuoiDau.Text = "Cắt chuỗi đầu";
+            btn_CatChuoiDau.UseVisualStyleBackColor = true;
+            btn_CatChuoiDau.Click += btn_CatChuoiDau_Click;
             // 
-            // button2
+            // btn_CatChuoiGiua
             // 
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            button2.Location = new Point(678, 319);
-            button2.Margin = new Padding(4, 5, 4, 5);
-            button2.Name = "button2";
-            button2.Size = new Size(179, 38);
-            button2.TabIndex = 64;
-            button2.Text = "Cắt chuỗi giữa";
-            button2.UseVisualStyleBackColor = true;
+            btn_CatChuoiGiua.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btn_CatChuoiGiua.Location = new Point(678, 319);
+            btn_CatChuoiGiua.Margin = new Padding(4, 5, 4, 5);
+            btn_CatChuoiGiua.Name = "btn_CatChuoiGiua";
+            btn_CatChuoiGiua.Size = new Size(179, 38);
+            btn_CatChuoiGiua.TabIndex = 64;
+            btn_CatChuoiGiua.Text = "Cắt chuỗi giữa";
+            btn_CatChuoiGiua.UseVisualStyleBackColor = true;
+            btn_CatChuoiGiua.Click += btn_CatChuoiGiua_Click;
             // 
-            // button3
+            // btn_CatChuoiCuoi
             // 
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            button3.Location = new Point(1135, 319);
-            button3.Margin = new Padding(4, 5, 4, 5);
-            button3.Name = "button3";
-            button3.Size = new Size(179, 38);
-            button3.TabIndex = 65;
-            button3.Text = "Cắt chuỗi cuối";
-            button3.UseVisualStyleBackColor = true;
+            btn_CatChuoiCuoi.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btn_CatChuoiCuoi.Location = new Point(1135, 319);
+            btn_CatChuoiCuoi.Margin = new Padding(4, 5, 4, 5);
+            btn_CatChuoiCuoi.Name = "btn_CatChuoiCuoi";
+            btn_CatChuoiCuoi.Size = new Size(179, 38);
+            btn_CatChuoiCuoi.TabIndex = 65;
+            btn_CatChuoiCuoi.Text = "Cắt chuỗi cuối";
+            btn_CatChuoiCuoi.UseVisualStyleBackColor = true;
+            btn_CatChuoiCuoi.Click += btn_CatChuoiCuoi_Click;
+            // 
+            // btn_Back
+            // 
+            btn_Back.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btn_Back.Location = new Point(1356, 255);
+            btn_Back.Margin = new Padding(4, 5, 4, 5);
+            btn_Back.Name = "btn_Back";
+            btn_Back.Size = new Size(179, 38);
+            btn_Back.TabIndex = 66;
+            btn_Back.Text = "Back";
+            btn_Back.UseVisualStyleBackColor = true;
+            btn_Back.Click += btn_Back_Click;
             // 
             // Karatsuba
             // 
@@ -433,12 +450,13 @@
             AutoSize = true;
             CancelButton = btnExit;
             ClientSize = new Size(1554, 833);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(btn_Back);
+            Controls.Add(btn_CatChuoiCuoi);
+            Controls.Add(btn_CatChuoiGiua);
+            Controls.Add(btn_CatChuoiDau);
             Controls.Add(button6);
             Controls.Add(btn_LoadTreeView);
-            Controls.Add(textBox5);
+            Controls.Add(txt_ChuoiCuoi);
             Controls.Add(txt_ChuoiDau);
             Controls.Add(txt_ChuoiGiua);
             Controls.Add(label7);
@@ -500,11 +518,12 @@
         private Button btn_ChuoiDau;
         private TextBox txt_ChuoiGiua;
         private TextBox txt_ChuoiDau;
-        private TextBox textBox5;
+        private TextBox txt_ChuoiCuoi;
         private Button btn_LoadTreeView;
         private Button button6;
-        private Button button1;
-        private Button button2;
-        private Button button3;
+        private Button btn_CatChuoiDau;
+        private Button btn_CatChuoiGiua;
+        private Button btn_CatChuoiCuoi;
+        private Button btn_Back;
     }
 }

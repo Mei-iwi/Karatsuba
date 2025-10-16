@@ -47,7 +47,7 @@ namespace Karatsuba
         }
        
 
-        private static long KaratsubaMultiply(long x, long y)
+        public static long KaratsubaMultiply(long x, long y)
         {
             //Kiểm tra dấu của kết quả
             int s = (x > 0 ? 1 : -1) * (y > 0 ? 1 : -1);
