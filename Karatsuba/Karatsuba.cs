@@ -32,7 +32,7 @@
         private void Karatsuba_Load(object sender, EventArgs e)
         {
             this.Icon = Properties.Resources.robotic_hand;
-           
+
         }
 
         private void btn_LoadTreeView_Click(object sender, EventArgs e)
@@ -112,10 +112,10 @@
             if (txtGiua != null) txtGiua.Text = txt_ChuoiGiua.Text;
             if (txtCuoi != null) txtCuoi.Text = txt_ChuoiCuoi.Text;
         }
-    
 
-       
-        
+
+
+
         /// ---------------------------------------------------------------------------------------------------------------------------///
         //hàm cawys chuỗi và hiển thị lại
         private void CatChuoiVaHienThi(long x, long y,
@@ -230,7 +230,7 @@
             txt_NhapA.Text = ab.ToString();
             txt_NhapB.Text = cd.ToString();
             CatChuoiVaHienThi(ab, cd, txt_ChuoiDau, txt_ChuoiGiua, txt_ChuoiCuoi);
-            //CapNhatBangKetQua("Dau", txt_ChuoiDau.Text, txt_ChuoiGiua.Text, txt_ChuoiCuoi.Text);
+            //CapNhatBangKetQua("Dau", txt_ChuoiDau.Text, txt_ChuoiGiua.Text, txt_ChuoiCuoi.Text
             LuuKetQua(false, 1);
             dongHienTai = 1;
         }
@@ -286,17 +286,8 @@
             txt_ChuoiGiua1.Clear();
             txt_ChuoiCuoi1.Clear();
 
-            //xoas chuỗi giữa
-            //txt_ChuoiDau2.Clear();
-            //txt_ChuoiGiua2.Clear();
-            //txt_ChuoiCuoi2.Clear();
+         
 
-            ////xoas du lieu cap 2 o chuoi cuoi
-            //txt_ChuoiDau3.Clear();
-            //txt_ChuoiGiua3.Clear();
-            //txt_ChuoiCuoi3.Clear();
-            //cập nhật 
-          
         }
         private void TinhDong(TextBox txtGocDau, TextBox txtGocGiua, TextBox txtGocCuoi,
                        TextBox txtDongDau, TextBox txtDongGiua, TextBox txtDongCuoi)
@@ -321,36 +312,21 @@
         }
         private void btn_ChuoiDau_Click(object sender, EventArgs e)
         {
-          
+
 
             txt_ChuoiDau1.Text = TinhKaratsubaTuTextBox(txt_ChuoiDau);
             txt_ChuoiGiua1.Text = TinhKaratsubaTuTextBox(txt_ChuoiGiua);
             txt_ChuoiCuoi1.Text = TinhKaratsubaTuTextBox(txt_ChuoiCuoi);
 
-             // lưu kết quả trở lại bảng dòng 1
+            // lưu kết quả trở lại bảng dòng 1
         }
 
-        //private void btn_ChuoiGiua_Click(object sender, EventArgs e)
-        //{
-          
+        private void txt_ChuoiDau1_TextChanged(object sender, EventArgs e)
+        {
 
-        //    txt_ChuoiDau2.Text = TinhKaratsubaTuTextBox(txt_ChuoiDau);
-        //    txt_ChuoiGiua2.Text = TinhKaratsubaTuTextBox(txt_ChuoiGiua);
-        //    txt_ChuoiCuoi2.Text = TinhKaratsubaTuTextBox(txt_ChuoiCuoi);
+        }
 
-          
-        //}
-
-        //private void btn_ChuoiCuoi_Click(object sender, EventArgs e)
-        //{
-           
-
-        //    txt_ChuoiDau3.Text = TinhKaratsubaTuTextBox(txt_ChuoiDau);
-        //    txt_ChuoiGiua3.Text = TinhKaratsubaTuTextBox(txt_ChuoiGiua);
-        //    txt_ChuoiCuoi3.Text = TinhKaratsubaTuTextBox(txt_ChuoiCuoi);
-
-            
-        //}
+      
 
 
 
