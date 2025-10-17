@@ -17,6 +17,8 @@ namespace Karatsuba
         {
             InitializeComponent();
             LoadTree(Karatsuba.TreeResult);
+          
+
         }
 
         private void LoadTree(KaratsubaNode root)
@@ -27,6 +29,7 @@ namespace Karatsuba
             TreeNode rootNode = CreateNode(root);
             treeView1.Nodes.Add(rootNode);
             treeView1.ExpandAll();
+            this.Icon = Properties.Resources.robotic_hand;
         }
 
         private TreeNode CreateNode(KaratsubaNode node)
@@ -41,9 +44,11 @@ namespace Karatsuba
 
         private void btn_Back_Click(object sender, EventArgs e)
         {
-            Karatsuba kb= new Karatsuba();
-            kb.Show();
-            this.Hide();
+            //Karatsuba kb= new Karatsuba();
+            //kb.Show();
+            //this.Hide();
+
+            this.Close();
         }
     }
 }

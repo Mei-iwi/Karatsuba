@@ -19,7 +19,7 @@
 
         private void Close_Window(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Are you sure you want to exit?", "⚠️ Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+            DialogResult result = MessageBox.Show("Bạn có chắc muốn thoát?", "⚠️ Thoát", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
             if (result == DialogResult.No)
             {
@@ -38,7 +38,7 @@
         {
             TreeView tv = new TreeView();
             tv.Show();
-            this.Hide();
+            //this.Hide();
         }
 
         private void btn_KetQua_Click(object sender, EventArgs e)
@@ -66,12 +66,7 @@
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult r = MessageBox.Show("Are you sure you want to exit?", "⚠️ Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-            if (r == DialogResult.Yes)
-            {
-                this.Close();
-            }
-            return;
+            Close();
         }
         /// <summary>
         /// -------------------------------------------------------------------------------------------------------------------------------------------
