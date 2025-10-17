@@ -36,19 +36,19 @@
             // 
             treeView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             treeView1.Location = new Point(0, 0);
-            treeView1.Margin = new Padding(3, 4, 3, 4);
+            treeView1.Margin = new Padding(4, 5, 4, 5);
             treeView1.Name = "treeView1";
-            treeView1.Size = new Size(716, 599);
+            treeView1.Size = new Size(894, 748);
             treeView1.TabIndex = 0;
             // 
             // btn_Back
             // 
             btn_Back.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             btn_Back.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_Back.Location = new Point(797, 530);
-            btn_Back.Margin = new Padding(3, 4, 3, 4);
+            btn_Back.Location = new Point(996, 662);
+            btn_Back.Margin = new Padding(4, 5, 4, 5);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(86, 31);
+            btn_Back.Size = new Size(108, 39);
             btn_Back.TabIndex = 1;
             btn_Back.Text = "Back";
             btn_Back.UseVisualStyleBackColor = true;
@@ -56,15 +56,16 @@
             // 
             // TreeView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(914, 600);
+            ClientSize = new Size(1142, 750);
             Controls.Add(btn_Back);
             Controls.Add(treeView1);
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "TreeView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "TreeView";
+            Load += TreeView_Load;
             ResumeLayout(false);
         }
 

@@ -17,7 +17,7 @@ namespace Karatsuba
         {
             InitializeComponent();
             LoadTree(Karatsuba.TreeResult);
-          
+
 
         }
 
@@ -49,6 +49,11 @@ namespace Karatsuba
             //this.Hide();
 
             this.Close();
+        }
+
+        private void TreeView_Load(object sender, EventArgs e)
+        {
+            treeView1.CollapseAll();
         }
     }
 }
