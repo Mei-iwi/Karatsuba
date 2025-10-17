@@ -38,8 +38,8 @@
             txt_ChuoiDau1 = new TextBox();
             txt_ChuoiGiua1 = new TextBox();
             txt_ChuoiCuoi1 = new TextBox();
-            btnExit = new Button();
             btn_KetQua = new Button();
+            btnExit = new Button();
             txt_KetQua = new TextBox();
             txt_NhapB = new TextBox();
             label1 = new Label();
@@ -59,6 +59,7 @@
             btn_CatChuoiGiua = new Button();
             btn_CatChuoiCuoi = new Button();
             btn_Back = new Button();
+            btnDeleteAll = new Button();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,10 +67,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label7.Location = new Point(1328, 92);
-            label7.Margin = new Padding(6, 0, 6, 0);
+            label7.Location = new Point(1062, 74);
+            label7.Margin = new Padding(5, 0, 5, 0);
             label7.Name = "label7";
-            label7.Size = new Size(20, 25);
+            label7.Size = new Size(16, 20);
             label7.TabIndex = 57;
             label7.Text = ")";
             // 
@@ -80,22 +81,23 @@
             groupBox1.Controls.Add(txt_ChuoiDau1);
             groupBox1.Controls.Add(txt_ChuoiGiua1);
             groupBox1.Controls.Add(txt_ChuoiCuoi1);
+            groupBox1.Controls.Add(btn_KetQua);
             groupBox1.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            groupBox1.Location = new Point(61, 355);
-            groupBox1.Margin = new Padding(6, 8, 6, 8);
+            groupBox1.Location = new Point(42, 297);
+            groupBox1.Margin = new Padding(5, 6, 5, 6);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(6, 8, 6, 8);
-            groupBox1.Size = new Size(1474, 262);
+            groupBox1.Padding = new Padding(5, 6, 5, 6);
+            groupBox1.Size = new Size(1133, 210);
             groupBox1.TabIndex = 55;
             groupBox1.TabStop = false;
             groupBox1.Text = "Xử lý chia";
             // 
             // btn_ChuoiDau
             // 
-            btn_ChuoiDau.Location = new Point(1265, 20);
-            btn_ChuoiDau.Margin = new Padding(6, 8, 6, 8);
+            btn_ChuoiDau.Location = new Point(344, 116);
+            btn_ChuoiDau.Margin = new Padding(5, 6, 5, 6);
             btn_ChuoiDau.Name = "btn_ChuoiDau";
-            btn_ChuoiDau.Size = new Size(182, 48);
+            btn_ChuoiDau.Size = new Size(195, 70);
             btn_ChuoiDau.TabIndex = 58;
             btn_ChuoiDau.Text = "Tính chuỗi đầu";
             btn_ChuoiDau.UseVisualStyleBackColor = true;
@@ -103,127 +105,143 @@
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(69, -75);
-            textBox9.Margin = new Padding(6, 8, 6, 8);
+            textBox9.Location = new Point(55, -60);
+            textBox9.Margin = new Padding(5, 6, 5, 6);
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(164, 30);
+            textBox9.Size = new Size(132, 26);
             textBox9.TabIndex = 25;
             // 
             // txt_ChuoiDau1
             // 
             txt_ChuoiDau1.BorderStyle = BorderStyle.FixedSingle;
             txt_ChuoiDau1.Enabled = false;
-            txt_ChuoiDau1.Location = new Point(30, 38);
-            txt_ChuoiDau1.Margin = new Padding(6, 8, 6, 8);
+            txt_ChuoiDau1.Font = new Font("Tahoma", 12F);
+            txt_ChuoiDau1.Location = new Point(28, 42);
+            txt_ChuoiDau1.Margin = new Padding(5, 6, 5, 6);
+            txt_ChuoiDau1.Multiline = true;
             txt_ChuoiDau1.Name = "txt_ChuoiDau1";
-            txt_ChuoiDau1.Size = new Size(333, 30);
+            txt_ChuoiDau1.Size = new Size(310, 60);
             txt_ChuoiDau1.TabIndex = 27;
+            txt_ChuoiDau1.TextAlign = HorizontalAlignment.Center;
             txt_ChuoiDau1.TextChanged += txt_ChuoiDau1_TextChanged;
             // 
             // txt_ChuoiGiua1
             // 
             txt_ChuoiGiua1.BorderStyle = BorderStyle.FixedSingle;
             txt_ChuoiGiua1.Enabled = false;
-            txt_ChuoiGiua1.Location = new Point(462, 38);
-            txt_ChuoiGiua1.Margin = new Padding(6, 8, 6, 8);
+            txt_ChuoiGiua1.Font = new Font("Tahoma", 12F);
+            txt_ChuoiGiua1.Location = new Point(400, 43);
+            txt_ChuoiGiua1.Margin = new Padding(5, 6, 5, 6);
+            txt_ChuoiGiua1.Multiline = true;
             txt_ChuoiGiua1.Name = "txt_ChuoiGiua1";
-            txt_ChuoiGiua1.Size = new Size(333, 30);
+            txt_ChuoiGiua1.Size = new Size(310, 60);
             txt_ChuoiGiua1.TabIndex = 22;
+            txt_ChuoiGiua1.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_ChuoiCuoi1
             // 
             txt_ChuoiCuoi1.BorderStyle = BorderStyle.FixedSingle;
             txt_ChuoiCuoi1.Enabled = false;
-            txt_ChuoiCuoi1.Location = new Point(920, 38);
-            txt_ChuoiCuoi1.Margin = new Padding(6, 8, 6, 8);
+            txt_ChuoiCuoi1.Font = new Font("Tahoma", 12F);
+            txt_ChuoiCuoi1.Location = new Point(787, 42);
+            txt_ChuoiCuoi1.Margin = new Padding(5, 6, 5, 6);
+            txt_ChuoiCuoi1.Multiline = true;
             txt_ChuoiCuoi1.Name = "txt_ChuoiCuoi1";
-            txt_ChuoiCuoi1.Size = new Size(333, 30);
+            txt_ChuoiCuoi1.Size = new Size(310, 60);
             txt_ChuoiCuoi1.TabIndex = 28;
-            // 
-            // btnExit
-            // 
-            btnExit.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btnExit.ForeColor = SystemColors.ActiveCaptionText;
-            btnExit.Location = new Point(798, 762);
-            btnExit.Margin = new Padding(6, 8, 6, 8);
-            btnExit.Name = "btnExit";
-            btnExit.Size = new Size(179, 60);
-            btnExit.TabIndex = 54;
-            btnExit.Text = "Thoát";
-            btnExit.UseVisualStyleBackColor = true;
-            btnExit.Click += btnExit_Click;
+            txt_ChuoiCuoi1.TextAlign = HorizontalAlignment.Center;
             // 
             // btn_KetQua
             // 
             btn_KetQua.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_KetQua.Location = new Point(1336, 632);
-            btn_KetQua.Margin = new Padding(6, 8, 6, 8);
+            btn_KetQua.Location = new Point(561, 115);
+            btn_KetQua.Margin = new Padding(5, 6, 5, 6);
             btn_KetQua.Name = "btn_KetQua";
-            btn_KetQua.Size = new Size(182, 78);
+            btn_KetQua.Size = new Size(195, 70);
             btn_KetQua.TabIndex = 53;
             btn_KetQua.Text = "Kết quả";
             btn_KetQua.UseVisualStyleBackColor = true;
             btn_KetQua.Click += btn_KetQua_Click;
             // 
+            // btnExit
+            // 
+            btnExit.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btnExit.ForeColor = SystemColors.ActiveCaptionText;
+            btnExit.Location = new Point(638, 610);
+            btnExit.Margin = new Padding(5, 6, 5, 6);
+            btnExit.Name = "btnExit";
+            btnExit.Size = new Size(143, 48);
+            btnExit.TabIndex = 54;
+            btnExit.Text = "Thoát";
+            btnExit.UseVisualStyleBackColor = true;
+            btnExit.Click += btnExit_Click;
+            // 
             // txt_KetQua
             // 
-            txt_KetQua.Font = new Font("Consolas", 10F, FontStyle.Regular, GraphicsUnit.Point, 163);
-            txt_KetQua.Location = new Point(202, 655);
-            txt_KetQua.Margin = new Padding(6, 8, 6, 8);
+            txt_KetQua.Font = new Font("Tahoma", 12F);
+            txt_KetQua.Location = new Point(162, 524);
+            txt_KetQua.Margin = new Padding(5, 6, 5, 6);
             txt_KetQua.Multiline = true;
             txt_KetQua.Name = "txt_KetQua";
             txt_KetQua.ReadOnly = true;
             txt_KetQua.ScrollBars = ScrollBars.Both;
-            txt_KetQua.Size = new Size(995, 62);
+            txt_KetQua.Size = new Size(797, 50);
             txt_KetQua.TabIndex = 50;
+            txt_KetQua.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_NhapB
             // 
-            txt_NhapB.Location = new Point(840, 88);
-            txt_NhapB.Margin = new Padding(6, 8, 6, 8);
+            txt_NhapB.Font = new Font("Tahoma", 12F);
+            txt_NhapB.Location = new Point(672, 58);
+            txt_NhapB.Margin = new Padding(5, 6, 5, 6);
+            txt_NhapB.Multiline = true;
             txt_NhapB.Name = "txt_NhapB";
-            txt_NhapB.Size = new Size(474, 31);
+            txt_NhapB.Size = new Size(380, 48);
             txt_NhapB.TabIndex = 56;
+            txt_NhapB.TextAlign = HorizontalAlignment.Center;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label1.ForeColor = Color.FromArgb(192, 0, 0);
-            label1.Location = new Point(506, 12);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.ForeColor = Color.FromArgb(0, 0, 192);
+            label1.Location = new Point(495, -4);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(354, 61);
+            label1.Size = new Size(296, 52);
             label1.TabIndex = 39;
             label1.Text = "KARATSUBA";
             // 
             // txt_NhapA
             // 
-            txt_NhapA.Location = new Point(268, 90);
-            txt_NhapA.Margin = new Padding(6, 8, 6, 8);
+            txt_NhapA.Font = new Font("Tahoma", 12F);
+            txt_NhapA.Location = new Point(220, 58);
+            txt_NhapA.Margin = new Padding(5, 6, 5, 6);
+            txt_NhapA.Multiline = true;
             txt_NhapA.Name = "txt_NhapA";
-            txt_NhapA.Size = new Size(504, 31);
+            txt_NhapA.Size = new Size(404, 48);
             txt_NhapA.TabIndex = 40;
+            txt_NhapA.TextAlign = HorizontalAlignment.Center;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label4.Location = new Point(619, 190);
-            label4.Margin = new Padding(6, 0, 6, 0);
+            label4.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            label4.Location = new Point(518, 132);
+            label4.Margin = new Padding(5, 0, 5, 0);
             label4.Name = "label4";
-            label4.Size = new Size(116, 25);
+            label4.Size = new Size(118, 24);
             label4.TabIndex = 45;
             label4.Text = "Chuỗi giữa";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label3.Location = new Point(202, 190);
-            label3.Margin = new Padding(6, 0, 6, 0);
+            label3.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            label3.Location = new Point(178, 132);
+            label3.Margin = new Padding(5, 0, 5, 0);
             label3.Name = "label3";
-            label3.Size = new Size(111, 25);
+            label3.Size = new Size(111, 24);
             label3.TabIndex = 44;
             label3.Text = "Chuỗi đầu";
             // 
@@ -231,10 +249,10 @@
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label16.Location = new Point(94, 672);
-            label16.Margin = new Padding(6, 0, 6, 0);
+            label16.Location = new Point(75, 538);
+            label16.Margin = new Padding(5, 0, 5, 0);
             label16.Name = "label16";
-            label16.Size = new Size(94, 25);
+            label16.Size = new Size(79, 20);
             label16.TabIndex = 49;
             label16.Text = "Kết quả:";
             // 
@@ -242,10 +260,10 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label6.Location = new Point(798, 100);
-            label6.Margin = new Padding(6, 0, 6, 0);
+            label6.Location = new Point(638, 74);
+            label6.Margin = new Padding(5, 0, 5, 0);
             label6.Name = "label6";
-            label6.Size = new Size(19, 25);
+            label6.Size = new Size(15, 20);
             label6.TabIndex = 48;
             label6.Text = ";";
             // 
@@ -253,21 +271,21 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label2.Location = new Point(129, 92);
-            label2.Margin = new Padding(6, 0, 6, 0);
+            label2.Location = new Point(103, 74);
+            label2.Margin = new Padding(5, 0, 5, 0);
             label2.Name = "label2";
-            label2.Size = new Size(125, 25);
+            label2.Size = new Size(107, 20);
             label2.TabIndex = 47;
             label2.Text = "Karatsuba (";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            label5.Location = new Point(1124, 190);
-            label5.Margin = new Padding(6, 0, 6, 0);
+            label5.Font = new Font("Tahoma", 12F, FontStyle.Bold);
+            label5.Location = new Point(872, 132);
+            label5.Margin = new Padding(5, 0, 5, 0);
             label5.Name = "label5";
-            label5.Size = new Size(115, 25);
+            label5.Size = new Size(115, 24);
             label5.TabIndex = 46;
             label5.Text = "Chuỗi cuối";
             // 
@@ -275,42 +293,53 @@
             // 
             txt_ChuoiGiua.BorderStyle = BorderStyle.FixedSingle;
             txt_ChuoiGiua.Enabled = false;
-            txt_ChuoiGiua.Location = new Point(524, 255);
-            txt_ChuoiGiua.Margin = new Padding(6, 8, 6, 8);
+            txt_ChuoiGiua.Font = new Font("Tahoma", 12F);
+            txt_ChuoiGiua.Location = new Point(436, 162);
+            txt_ChuoiGiua.Margin = new Padding(5, 6, 5, 6);
+            txt_ChuoiGiua.Multiline = true;
             txt_ChuoiGiua.Name = "txt_ChuoiGiua";
-            txt_ChuoiGiua.Size = new Size(333, 31);
+            txt_ChuoiGiua.Size = new Size(310, 60);
             txt_ChuoiGiua.TabIndex = 58;
+            txt_ChuoiGiua.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_ChuoiDau
             // 
             txt_ChuoiDau.BorderStyle = BorderStyle.FixedSingle;
             txt_ChuoiDau.Enabled = false;
-            txt_ChuoiDau.Location = new Point(86, 255);
-            txt_ChuoiDau.Margin = new Padding(6, 8, 6, 8);
+            txt_ChuoiDau.Font = new Font("Tahoma", 12F);
+            txt_ChuoiDau.Location = new Point(104, 162);
+            txt_ChuoiDau.Margin = new Padding(5, 6, 5, 6);
+            txt_ChuoiDau.Multiline = true;
             txt_ChuoiDau.Name = "txt_ChuoiDau";
-            txt_ChuoiDau.Size = new Size(333, 31);
+            txt_ChuoiDau.Size = new Size(310, 60);
             txt_ChuoiDau.TabIndex = 59;
+            txt_ChuoiDau.TextAlign = HorizontalAlignment.Center;
             // 
             // txt_ChuoiCuoi
             // 
             txt_ChuoiCuoi.BorderStyle = BorderStyle.FixedSingle;
             txt_ChuoiCuoi.Enabled = false;
-            txt_ChuoiCuoi.Location = new Point(981, 255);
-            txt_ChuoiCuoi.Margin = new Padding(6, 8, 6, 8);
+            txt_ChuoiCuoi.Font = new Font("Tahoma", 12F);
+            txt_ChuoiCuoi.Location = new Point(768, 162);
+            txt_ChuoiCuoi.Margin = new Padding(5, 6, 5, 6);
+            txt_ChuoiCuoi.Multiline = true;
             txt_ChuoiCuoi.Name = "txt_ChuoiCuoi";
-            txt_ChuoiCuoi.Size = new Size(333, 31);
+            txt_ChuoiCuoi.Size = new Size(310, 60);
             txt_ChuoiCuoi.TabIndex = 60;
+            txt_ChuoiCuoi.TextAlign = HorizontalAlignment.Center;
             // 
             // btn_LoadTreeView
             // 
+            btn_LoadTreeView.BackColor = Color.LimeGreen;
             btn_LoadTreeView.Font = new Font("Arial", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_LoadTreeView.Location = new Point(1340, 762);
-            btn_LoadTreeView.Margin = new Padding(4, 5, 4, 5);
+            btn_LoadTreeView.ForeColor = Color.White;
+            btn_LoadTreeView.Location = new Point(1013, 517);
+            btn_LoadTreeView.Margin = new Padding(3, 4, 3, 4);
             btn_LoadTreeView.Name = "btn_LoadTreeView";
-            btn_LoadTreeView.Size = new Size(179, 38);
+            btn_LoadTreeView.Size = new Size(146, 70);
             btn_LoadTreeView.TabIndex = 61;
             btn_LoadTreeView.Text = "LoadTreeView";
-            btn_LoadTreeView.UseVisualStyleBackColor = true;
+            btn_LoadTreeView.UseVisualStyleBackColor = false;
             btn_LoadTreeView.Click += btn_LoadTreeView_Click;
             // 
             // button6
@@ -318,10 +347,10 @@
             button6.BackColor = Color.DodgerBlue;
             button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
             button6.ForeColor = SystemColors.ButtonHighlight;
-            button6.Location = new Point(1362, 88);
-            button6.Margin = new Padding(4, 5, 4, 5);
+            button6.Location = new Point(1086, 58);
+            button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
-            button6.Size = new Size(179, 38);
+            button6.Size = new Size(143, 62);
             button6.TabIndex = 62;
             button6.Text = "Cắt chuỗi";
             button6.UseVisualStyleBackColor = false;
@@ -330,10 +359,10 @@
             // btn_CatChuoiDau
             // 
             btn_CatChuoiDau.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_CatChuoiDau.Location = new Point(240, 319);
-            btn_CatChuoiDau.Margin = new Padding(4, 5, 4, 5);
+            btn_CatChuoiDau.Location = new Point(130, 242);
+            btn_CatChuoiDau.Margin = new Padding(3, 4, 3, 4);
             btn_CatChuoiDau.Name = "btn_CatChuoiDau";
-            btn_CatChuoiDau.Size = new Size(179, 38);
+            btn_CatChuoiDau.Size = new Size(143, 45);
             btn_CatChuoiDau.TabIndex = 63;
             btn_CatChuoiDau.Text = "Cắt chuỗi đầu";
             btn_CatChuoiDau.UseVisualStyleBackColor = true;
@@ -342,10 +371,10 @@
             // btn_CatChuoiGiua
             // 
             btn_CatChuoiGiua.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_CatChuoiGiua.Location = new Point(678, 319);
-            btn_CatChuoiGiua.Margin = new Padding(4, 5, 4, 5);
+            btn_CatChuoiGiua.Location = new Point(510, 242);
+            btn_CatChuoiGiua.Margin = new Padding(3, 4, 3, 4);
             btn_CatChuoiGiua.Name = "btn_CatChuoiGiua";
-            btn_CatChuoiGiua.Size = new Size(179, 38);
+            btn_CatChuoiGiua.Size = new Size(143, 45);
             btn_CatChuoiGiua.TabIndex = 64;
             btn_CatChuoiGiua.Text = "Cắt chuỗi giữa";
             btn_CatChuoiGiua.UseVisualStyleBackColor = true;
@@ -354,10 +383,10 @@
             // btn_CatChuoiCuoi
             // 
             btn_CatChuoiCuoi.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_CatChuoiCuoi.Location = new Point(1135, 319);
-            btn_CatChuoiCuoi.Margin = new Padding(4, 5, 4, 5);
+            btn_CatChuoiCuoi.Location = new Point(853, 242);
+            btn_CatChuoiCuoi.Margin = new Padding(3, 4, 3, 4);
             btn_CatChuoiCuoi.Name = "btn_CatChuoiCuoi";
-            btn_CatChuoiCuoi.Size = new Size(179, 38);
+            btn_CatChuoiCuoi.Size = new Size(143, 45);
             btn_CatChuoiCuoi.TabIndex = 65;
             btn_CatChuoiCuoi.Text = "Cắt chuỗi cuối";
             btn_CatChuoiCuoi.UseVisualStyleBackColor = true;
@@ -366,22 +395,38 @@
             // btn_Back
             // 
             btn_Back.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
-            btn_Back.Location = new Point(1356, 255);
-            btn_Back.Margin = new Padding(4, 5, 4, 5);
+            btn_Back.Location = new Point(1100, 185);
+            btn_Back.Margin = new Padding(3, 4, 3, 4);
             btn_Back.Name = "btn_Back";
-            btn_Back.Size = new Size(179, 38);
+            btn_Back.Size = new Size(113, 62);
             btn_Back.TabIndex = 66;
             btn_Back.Text = "Back";
             btn_Back.UseVisualStyleBackColor = true;
             btn_Back.Click += btn_Back_Click;
             // 
+            // btnDeleteAll
+            // 
+            btnDeleteAll.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 163);
+            btnDeleteAll.ForeColor = SystemColors.ActiveCaptionText;
+            btnDeleteAll.Location = new Point(475, 610);
+            btnDeleteAll.Margin = new Padding(5, 6, 5, 6);
+            btnDeleteAll.Name = "btnDeleteAll";
+            btnDeleteAll.Size = new Size(143, 48);
+            btnDeleteAll.TabIndex = 67;
+            btnDeleteAll.Text = "Xóa hết";
+            btnDeleteAll.UseVisualStyleBackColor = true;
+            btnDeleteAll.Click += btnDeleteAll_Click;
+            // 
             // Karatsuba
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AcceptButton = btn_KetQua;
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
+            BackColor = Color.FromArgb(192, 255, 255);
             CancelButton = btnExit;
-            ClientSize = new Size(1554, 832);
+            ClientSize = new Size(1243, 666);
+            Controls.Add(btnDeleteAll);
             Controls.Add(btn_Back);
             Controls.Add(btn_CatChuoiCuoi);
             Controls.Add(btn_CatChuoiGiua);
@@ -394,7 +439,6 @@
             Controls.Add(label7);
             Controls.Add(groupBox1);
             Controls.Add(btnExit);
-            Controls.Add(btn_KetQua);
             Controls.Add(txt_KetQua);
             Controls.Add(txt_NhapB);
             Controls.Add(label1);
@@ -406,7 +450,7 @@
             Controls.Add(label2);
             Controls.Add(label5);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(4, 2, 4, 2);
+            Margin = new Padding(3, 2, 3, 2);
             MaximizeBox = false;
             Name = "Karatsuba";
             StartPosition = FormStartPosition.CenterScreen;
@@ -449,5 +493,6 @@
         private Button btn_CatChuoiGiua;
         private Button btn_CatChuoiCuoi;
         private Button btn_Back;
+        private Button btnDeleteAll;
     }
 }

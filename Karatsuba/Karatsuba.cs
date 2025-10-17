@@ -286,7 +286,7 @@
             txt_ChuoiGiua1.Clear();
             txt_ChuoiCuoi1.Clear();
 
-         
+
 
         }
         private void TinhDong(TextBox txtGocDau, TextBox txtGocGiua, TextBox txtGocCuoi,
@@ -326,7 +326,30 @@
 
         }
 
-      
+        private void btnDeleteAll_Click(object sender, EventArgs e)
+        {
+            //Xóa các text box ngoại groupbox
+            foreach(Control item in this.Controls)
+            {
+                if(item is TextBox)
+                {
+                    (item as TextBox).Clear();
+                }
+            }
+            //Xóa các text box trong groupbox
+            foreach (Control item in groupBox1.Controls)
+            {
+                if (item is TextBox)
+                {
+                    (item as TextBox).Clear();
+                }
+            }
+
+
+
+        }
+
+
 
 
 

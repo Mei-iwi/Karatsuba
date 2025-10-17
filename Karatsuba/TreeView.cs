@@ -54,6 +54,7 @@ namespace Karatsuba
         private void TreeView_Load(object sender, EventArgs e)
         {
             treeView1.CollapseAll();
+            treeView1.ExpandAll();
         }
     }
 }
