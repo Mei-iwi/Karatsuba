@@ -125,7 +125,7 @@
             btn_ChuoiCuoi.TabIndex = 59;
             btn_ChuoiCuoi.Text = "Tính chuỗi cuối";
             btn_ChuoiCuoi.UseVisualStyleBackColor = true;
-            btn_ChuoiCuoi.Click += btn_ChuoiCuoi_Click;
+            //btn_ChuoiCuoi.Click += btn_ChuoiCuoi_Click;
             // 
             // btn_ChuoiDau
             // 
@@ -175,7 +175,7 @@
             btn_ChuoiGiua.TabIndex = 52;
             btn_ChuoiGiua.Text = "Tính chuỗi giữa";
             btn_ChuoiGiua.UseVisualStyleBackColor = true;
-            btn_ChuoiGiua.Click += btn_ChuoiGiua_Click;
+            //btn_ChuoiGiua.Click += btn_ChuoiGiua_Click;
             // 
             // txt_ChuoiGiua2
             // 
