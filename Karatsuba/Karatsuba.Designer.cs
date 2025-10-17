@@ -116,23 +116,25 @@
             // 
             // btn_ChuoiCuoi
             // 
-            btn_ChuoiCuoi.Location = new Point(1274, 162);
+            btn_ChuoiCuoi.Location = new Point(1265, 155);
             btn_ChuoiCuoi.Margin = new Padding(6, 7, 6, 7);
             btn_ChuoiCuoi.Name = "btn_ChuoiCuoi";
             btn_ChuoiCuoi.Size = new Size(183, 48);
             btn_ChuoiCuoi.TabIndex = 59;
             btn_ChuoiCuoi.Text = "Tính chuỗi cuối";
             btn_ChuoiCuoi.UseVisualStyleBackColor = true;
+            btn_ChuoiCuoi.Click += btn_ChuoiCuoi_Click;
             // 
             // btn_ChuoiDau
             // 
-            btn_ChuoiDau.Location = new Point(1274, 25);
+            btn_ChuoiDau.Location = new Point(1265, 20);
             btn_ChuoiDau.Margin = new Padding(6, 7, 6, 7);
             btn_ChuoiDau.Name = "btn_ChuoiDau";
             btn_ChuoiDau.Size = new Size(183, 48);
             btn_ChuoiDau.TabIndex = 58;
             btn_ChuoiDau.Text = "Tính chuỗi đầu";
             btn_ChuoiDau.UseVisualStyleBackColor = true;
+            btn_ChuoiDau.Click += btn_ChuoiDau_Click;
             // 
             // txt_ChuoiDau2
             // 
@@ -160,13 +162,14 @@
             // 
             // btn_ChuoiGiua
             // 
-            btn_ChuoiGiua.Location = new Point(1274, 92);
+            btn_ChuoiGiua.Location = new Point(1266, 85);
             btn_ChuoiGiua.Margin = new Padding(6, 7, 6, 7);
             btn_ChuoiGiua.Name = "btn_ChuoiGiua";
             btn_ChuoiGiua.Size = new Size(183, 48);
             btn_ChuoiGiua.TabIndex = 52;
             btn_ChuoiGiua.Text = "Tính chuỗi giữa";
             btn_ChuoiGiua.UseVisualStyleBackColor = true;
+            btn_ChuoiGiua.Click += btn_ChuoiGiua_Click;
             // 
             // txt_ChuoiGiua2
             // 
