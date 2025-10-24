@@ -431,7 +431,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            BackColor = Color.SteelBlue;
+            BackColor = Color.Silver;
             CancelButton = btnExit;
             ClientSize = new Size(1243, 667);
             Controls.Add(btnDeleteAll);

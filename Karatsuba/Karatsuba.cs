@@ -183,7 +183,7 @@
             }
             if (parts[0].Length == 1 & parts[1].Length == 1)
             {
-                MessageBox.Show("Khoong thể tách được nữa");
+                MessageBox.Show("Không thể tách được nữa");
                 return;
             }
 
@@ -220,7 +220,7 @@
             }
             if (parts[0].Length == 1 & parts[1].Length == 1)
             {
-                MessageBox.Show("Khoong thể tách được nữa");
+                MessageBox.Show("Không thể tách được nữa");
                 return;
             }
             long ab = long.Parse(parts[0]);
@@ -257,7 +257,7 @@
             }
             if (parts[0].Length == 1 & parts[1].Length == 1)
             {
-                MessageBox.Show("Khoong thể tách được nữa");
+                MessageBox.Show("Không thể tách được nữa");
                 return;
             }
             long b = long.Parse(parts[0]);
