@@ -1,4 +1,6 @@
-﻿namespace Karatsuba
+﻿using System.Diagnostics;
+
+namespace Karatsuba
 {
     public partial class Karatsuba : Form
     {
@@ -46,19 +48,48 @@
         {
             try
             {
-                long x = long.Parse(txt_NhapA.Text);
-                long y = long.Parse(txt_NhapB.Text);
+                string inputA = txt_NhapA.Text.Trim();
+                string inputB = txt_NhapB.Text.Trim();
+
+                // --- Thuật toán Karatsuba ---
+                var sw = Stopwatch.StartNew();
+                string karatsubaResult = KaratsubaTreeview.KaratsubaMultiply(inputA, inputB); // Hàm xử lý string
+                sw.Stop();
+                double karatsubaTime = sw.Elapsed.TotalMilliseconds;
+
+                txt_KetQua.Text = karatsubaResult;
+                txt_ThoiGian.Text = $"{karatsubaTime:F4} ms";
+
+                // --- Thuật toán nhân truyền thống ---
+                sw.Restart();
+                string traditionalResult = TraditionalMultiplication.TraditionalMultiply(inputA, inputB); // Hàm xử lý string
+                sw.Stop();
+                double traditionalTime = sw.Elapsed.TotalMilliseconds;
+
+                txt_TGTra.Text = traditionalTime.ToString("F4") + " ms";
 
                 algo = new KaratsubaTreeview();
-                long result = algo.Compute(x, y);
-                txt_KetQua.Text = result.ToString();
+                string result = algo.Compute(inputA, inputB);
 
-                // lưu cây kết quả để dùng
+                // Cây tính toán đầy đủ
+                KaratsubaNode root = algo.Root;
+
+                // --- Tạo cây Karatsuba ---
+                //KaratsubaNode root = KaratsubaTreeview.GenerateKaratsubaTree(inputA, inputB);
+
+                // Lưu cây vào biến tĩnh
                 TreeResult = algo.Root;
+
+                // Hiển thị kết quả
+                txt_KetQua.Text = root.Result;
+
+              
+
+
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi: " + ex.Message);
+                //MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
@@ -141,7 +172,7 @@
 
                 if (!long.TryParse(txt_NhapA.Text.Trim(), out long x) || !long.TryParse(txt_NhapB.Text.Trim(), out long y))
                 {
-                    MessageBox.Show("Nhập số nguyên");
+                    MessageBox.Show("Nhập số nguyên hoặc số quá lớn không thể tính toán");
                     return;
                 }
 
@@ -312,7 +343,11 @@
         }
         private void btn_ChuoiDau_Click(object sender, EventArgs e)
         {
-
+            if (txt_ChuoiCuoi.Text == "" || txt_ChuoiDau.Text == "" || txt_ChuoiGiua.Text == "")
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ chuỗi");
+                return;
+            }
 
             txt_ChuoiDau1.Text = TinhKaratsubaTuTextBox(txt_ChuoiDau);
             txt_ChuoiGiua1.Text = TinhKaratsubaTuTextBox(txt_ChuoiGiua);
@@ -329,9 +364,9 @@
         private void btnDeleteAll_Click(object sender, EventArgs e)
         {
             //Xóa các text box ngoại groupbox
-            foreach(Control item in this.Controls)
+            foreach (Control item in this.Controls)
             {
-                if(item is TextBox)
+                if (item is TextBox)
                 {
                     (item as TextBox).Clear();
                 }
@@ -345,7 +380,13 @@
                 }
             }
 
-
+            foreach(Control item in groupBox2.Controls)
+            {
+                if (item is TextBox)
+                {
+                    (item as TextBox).Clear();
+                }
+            }
 
         }
 

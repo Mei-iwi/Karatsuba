@@ -9,7 +9,8 @@ namespace Karatsuba
     public class KaratsubaNode
     {
         public string Expression { get; set; }  
-        public long Result { get; set; }       
+        public string Result { get; set; }       
         public List<KaratsubaNode> Children { get; set; } = new List<KaratsubaNode>();
     }
+
 }
