@@ -51,45 +51,55 @@ namespace Karatsuba
                 string inputA = txt_NhapA.Text.Trim();
                 string inputB = txt_NhapB.Text.Trim();
 
+                if (string.IsNullOrEmpty(inputA) || string.IsNullOrEmpty(inputB))
+                {
+                    MessageBox.Show("Vui lòng nhập cả hai số.");
+                    return;
+                }
+
+                // --- Xử lý dấu ---
+                bool negA = inputA.StartsWith("-");
+                bool negB = inputB.StartsWith("-");
+                bool resultNeg = negA ^ negB; // Kết quả âm nếu chỉ có 1 số âm
+
+                if (negA) inputA = inputA.Substring(1);
+                if (negB) inputB = inputB.Substring(1);
+
                 // --- Thuật toán Karatsuba ---
                 var sw = Stopwatch.StartNew();
-                string karatsubaResult = KaratsubaTreeview.KaratsubaMultiply(inputA, inputB); // Hàm xử lý string
+                string karatsubaResult = KaratsubaTreeview.KaratsubaMultiply(inputA, inputB);
                 sw.Stop();
                 double karatsubaTime = sw.Elapsed.TotalMilliseconds;
 
-                txt_KetQua.Text = karatsubaResult;
-                txt_ThoiGian.Text = $"{karatsubaTime:F4} ms";
-
                 // --- Thuật toán nhân truyền thống ---
                 sw.Restart();
-                string traditionalResult = TraditionalMultiplication.TraditionalMultiply(inputA, inputB); // Hàm xử lý string
+                string traditionalResult = TraditionalMultiplication.TraditionalMultiply(inputA, inputB);
                 sw.Stop();
                 double traditionalTime = sw.Elapsed.TotalMilliseconds;
 
-                txt_TGTra.Text = traditionalTime.ToString("F4") + " ms";
+                // --- Thêm dấu âm nếu cần ---
+                if (resultNeg)
+                {
+                    if (karatsubaResult != "0") karatsubaResult = "-" + karatsubaResult;
+                    if (traditionalResult != "0") traditionalResult = "-" + traditionalResult;
+                }
 
-                algo = new KaratsubaTreeview();
-                string result = algo.Compute(inputA, inputB);
-
-                // Cây tính toán đầy đủ
-                KaratsubaNode root = algo.Root;
+                txt_KetQua.Text = karatsubaResult;
+                txt_ThoiGian.Text = $"{karatsubaTime:F4} ms";
+                txt_TGTra.Text = $"{traditionalTime:F4} ms";
 
                 // --- Tạo cây Karatsuba ---
-                //KaratsubaNode root = KaratsubaTreeview.GenerateKaratsubaTree(inputA, inputB);
-
-                // Lưu cây vào biến tĩnh
+                algo = new KaratsubaTreeview();
+                string treeResult = algo.Compute(inputA, inputB);
                 TreeResult = algo.Root;
 
-                // Hiển thị kết quả
-                txt_KetQua.Text = root.Result;
-
-              
-
-
+                // --- Hiển thị kết quả cây Karatsuba có dấu ---
+                if (resultNeg && treeResult != "0") treeResult = "-" + treeResult;
+                txt_KetQua.Text = treeResult;
             }
             catch (Exception ex)
             {
-                //MessageBox.Show("Lỗi: " + ex.Message);
+                MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
 
